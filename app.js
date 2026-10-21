@@ -84,7 +84,7 @@ const sessionOptions={
 
 // Home route
 app.get("/", (req, res) => {
-  res.redirect("/listings");
+  res.redirect("/listings").json({ message: "Welcome to FindPlace" });
 });
 
 
