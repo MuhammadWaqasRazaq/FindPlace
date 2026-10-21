@@ -1,8 +1,25 @@
 const Listing = require("../models/listing");
 
+const escapeRegex = (text) => text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
 module.exports.index = async (req, res) => {
-  const allListings = await Listing.find({});
-  res.render("listings/index", { allListings });
+  const search = typeof req.query.search === "string" ? req.query.search.trim() : "";
+  let filter = {};
+
+  if (search) {
+    const regex = new RegExp(escapeRegex(search), "i");
+    filter = {
+      $or: [
+        { title: regex },
+        { description: regex },
+        { location: regex },
+        { country: regex },
+      ],
+    };
+  }
+
+  const allListings = await Listing.find(filter);
+  res.render("listings/index", { allListings, search });
 };
 
 module.exports.renderForm = (req, res) => {

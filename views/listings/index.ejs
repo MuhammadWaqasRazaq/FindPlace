@@ -104,6 +104,15 @@
     </div>
   </div>
 </div>
+<% if (typeof search !== "undefined" && search) { %>
+<h4 class="mt-4">
+  <%= allListings.length %> result<%= allListings.length === 1 ? "" : "s" %> for
+  "<%= search %>"
+</h4>
+<% if (allListings.length === 0) { %>
+<p class="text-muted">No listings matched your search. Try a different destination.</p>
+<% } %>
+<% } %>
 <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 g-3 listing-card">
   <% for (let list of allListings) { %>
   <div class="col">
