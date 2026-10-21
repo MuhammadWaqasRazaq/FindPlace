@@ -1,0 +1,82 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row">
+  <div class="col-8 offset-2">
+    <form
+      method="POST"
+      action="/listings"
+      novalidate
+      class="needs-validation"
+      enctype="multipart/form-data"
+    >
+      <h2>Create a new Listing</h2>
+      <div class="mb-1">
+        <label for="title" class="form-label">Title</label>
+        <input
+          name="Listing[title]"
+          placeholder="Enter catcy title"
+          type="text"
+          class="form-control"
+          required
+        />
+
+        <div class="valid-feedback">Title looks good</div>
+        <div class="invalid-feedback">Title required!</div>
+      </div>
+
+      <div class="mb-1">
+        <label for="description" class="form-label">Description</label>
+        <textarea
+          name="Listing[description]"
+          class="form-control"
+          required
+        ></textarea>
+        <div class="invalid-feedback">please enter a description!</div>
+      </div>
+      <div class="mb-1">
+        <label for="image" class="form-label">Upload Listing Image</label>
+        <input name="Listing[image]" type="file" class="form-control" required/>
+          <div class="invalid-feedback">Image required!</div>
+      </div>
+
+      <div class="row">
+        <div class="mb-1 col-md-4">
+          <label for="price" class="form-label">Price</label>
+          <input
+            name="Listing[price]"
+            placeholder="30000"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">Enter a valid price!</div>
+        </div>
+
+        <div class="mb-1 col-md-8">
+          <label for="country" class="form-label">Country</label>
+          <input
+            name="Listing[country]"
+            placeholder="Pakistan"
+            type="text"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">Enter a country!</div>
+        </div>
+      </div>
+
+      <div class="mb-1">
+        <label for="location" class="form-label">Location</label>
+        <input
+          name="Listing[location]"
+          placeholder="DHA Phase 6, Lahore"
+          type="text"
+          class="form-control"
+          required
+        />
+        <div class="invalid-feedback">Enter a valid location</div>
+      </div>
+      <br />
+      <button class="btn btn-dark add-btn">ADD</button>
+      <br /><br />
+    </form>
+  </div>
+</div>

@@ -1,0 +1,192 @@
+body{
+  font-family: "Plus Jakarta Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* label{
+    font-weight: bold;
+} */
+.container{
+    flex:1;
+
+}
+
+/* Navbar */
+/* Navbar background aur shadow */
+.navbar {
+  background-color: #f8f9fa; /* halka grey/white background */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  height:4rem;
+}
+
+/* Links basic style */
+.navbar .nav-link {
+  font-weight: 500;
+  font-size: 16px;
+  margin-right: 18px;
+  color: #333 !important;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+/* Hover effect */
+.navbar .nav-link:hover {
+  color:#fe424d !important; /* Bootstrap blue */
+}
+
+/* Brand icon style */
+.navbar-brand {
+  font-size: 22px;
+  color: #fe424d !important;
+}
+
+
+/* .navbar{
+    height:5rem;
+    background-color: #fff;
+} */
+.fa-compass{
+    color:#fe424d;
+    font-size:2rem;
+}
+
+.nav-link{
+    color:#222222 !important;
+
+
+
+/* footer */    
+}
+.f-info-links a{
+    text-decoration: none;
+    color:#222222
+}.f-info-links a:hover{
+ text-decoration: underline;
+}
+.f-info-links, .f-info-social, 
+.f-info-brand{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.f-info-social i{
+    font-size:1.2rem;
+    margin-right: 1rem;
+
+}
+
+.f-info{
+    height:8rem;
+    /* width: 100%; */
+    background-color:#ebebeb;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center ;
+    align-items:
+    space-evenly;
+    text-align:center;
+}
+
+/* Cards */
+
+.listing-card{
+    border:none !important;
+    margin-bottom: 2rem;
+}
+.card-img-top{
+    border-radius:1rem !important;
+    width:100% !important;
+    object-fit: cover !important;
+}
+.card-body{
+    padding: 0 !important;
+
+}
+.card-text p{
+    font-weight: 400 !important;
+}
+.listing-link{
+    text-decoration: none;
+}
+
+/* card effect */
+
+.card-img-overlay{
+    opacity:0;
+}
+.card-img-overlay:hover{
+    opacity:0.2;
+    background-color:#fff;
+} 
+
+/* new page */
+.add-btn{
+    background-color:#fe424d !important;
+    border:none !important;
+}
+/* edit page */
+.edit-btn{
+    background-color:#fe424d !important;
+    border:none !important;
+}
+
+/* show image */
+.show-img{
+    height:50vh;
+
+}
+
+.btns{
+    display: flex;
+    margin-bottom:5px;
+}
+.show-card{
+    padding-right:0;
+    padding-left:0;
+}
+
+/* ...existing code ... */
+
+/* simple centered modal */
+.modal-overlay{
+  position: fixed;
+  inset: 0;
+  display: none; /* toggled by inline style for compatibility */
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.5);
+  z-index: 2000;
+}
+.modal-panel{
+  background: #fff;
+  padding: 1.25rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+/* buttons inside modal use existing btn classes; add .btn-danger if not present */
+.btn-danger{
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  padding: 0.45rem 0.75rem;
+  border-radius: 4px;
+}
+.btn-secondary{
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  padding: 0.45rem 0.75rem;
+  border-radius: 4px;
+}
+
+/* ...existing code ... */
+
+/* review card */
+.review-card{
+    background-color: #356ea0;
+}
